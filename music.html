@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="en-us" http-equiv="Content-Language" />
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>首页</title>
+</head>
+<body>
+
+<div id="content">
+
+  <div class="search_part">
+    <!-- 徽标 -->
+    <a class="logo" href="index.html">CPlayer</a>
+    <!-- 搜索 -->
+    <form onsubmit="return search()" class="search_bar">
+      <input type="submit" id="search_submit" value="搜索">
+      <span><input class="search" type="text" value="" name="word" autocomplete="off" id="search_input" ></span>
+    </form>
+  </div>
+
+  <!-- 网易云音乐 -->
+  <div class="box">
+    <a href="https://music.163.com/"></a>
+    <p><img class="icon" src="image/网易云音乐.png" ></p>
+    <p class="url">网易云音乐</p>
+  </div>
+
+  <!-- QQ音乐 -->
+  <div class="box">
+    <a href="https://y.qq.com/"></a>
+    <p><img class="icon" src="image/QQ音乐.png" ></p>
+    <p class="url">QQ音乐</p>
+  </div>
+
+  <!-- 酷狗音乐 -->
+  <div class="box">
+    <a href="https://www.kugou.com/"></a>
+    <p><img class="icon" src="image/酷狗音乐.png" ></p>
+    <p class="url">酷狗音乐</p>
+  </div>
+
+  <!-- 虾米音乐 -->
+  <div class="box">
+    <a href="https://www.xiami.com/"></a>
+    <p><img class="icon" src="image/虾米音乐.png" ></p>
+    <p class="url">虾米音乐</p>
+  </div>
+
+ <!-- 5sing -->
+  <div class="box">
+    <a href="http://5sing.kugou.com/"></a>
+    <p><img class="icon" src="image/5sing.png" ></p>
+    <p class="url">5sing</p>
+  </div>
+
+  <!-- 喜马拉雅 -->
+  <div class="box">
+    <a href="https://ximalaya.com/"></a>
+    <p><img class="icon" src="image/喜马拉雅.png" ></p>
+    <p class="url">喜马拉雅</p>
+  </div>
+</div>
+
+<script type="text/javascript">
+function search () {
+var wd=document.getElementsByName("word")[0].value;
+var link="https://cn.bing.com/search?q="+wd;
+window.open(link); }
+</script>
+
+</body>
+</html>

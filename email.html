@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="en-us" http-equiv="Content-Language" />
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>首页</title>
+</head>
+<body>
+
+<div id="content">
+
+  <div class="search_part">
+    <!-- 徽标 -->
+    <a class="logo" href="index.html">CPlayer</a>
+    <!-- 搜索 -->
+    <form onsubmit="return search()" class="search_bar">
+      <input type="submit" id="search_submit" value="搜索">
+      <span><input class="search" type="text" value="" name="word" autocomplete="off" id="search_input" ></span>
+    </form>
+  </div>
+
+  <!-- 139邮箱 -->
+  <div class="box">
+    <a href="https://mail.10086.cn/"></a>
+    <p><img class="icon" src="image/139邮箱.png" ></p>
+    <p class="url">139邮箱</p>
+  </div>
+
+  <!-- QQ邮箱 -->
+  <div class="box">
+    <a href="https://mail.qq.com/"></a>
+    <p><img class="icon" src="image/QQ邮箱.png" ></p>
+    <p class="url">QQ邮箱</p>
+  </div>
+
+  <!-- 网易邮箱 -->
+  <div class="box">
+    <a href="https://email.163.com/"></a>
+    <p><img class="icon" src="image/网易邮箱.png" ></p>
+    <p class="url">网易邮箱</p>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+function search () {
+var wd=document.getElementsByName("word")[0].value;
+var link="https://cn.bing.com/search?q="+wd;
+window.open(link); }
+</script>
+
+</body>
+</html>

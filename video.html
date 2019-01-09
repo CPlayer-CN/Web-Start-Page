@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="en-us" http-equiv="Content-Language" />
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>首页</title>
+</head>
+<body>
+
+<div id="content">
+
+  <div class="search_part">
+    <!-- 徽标 -->
+    <a class="logo" href="index.html">CPlayer</a>
+    <!-- 搜索 -->
+    <form onsubmit="return search()" class="search_bar">
+      <input type="submit" id="search_submit" value="搜索">
+      <span><input class="search" type="text" value="" name="word" autocomplete="off" id="search_input" ></span>
+    </form>
+  </div>
+
+  <!-- 哔哩哔哩 -->
+  <div class="box">
+    <a href="https://www.bilibili.com/"></a>
+    <p><img class="icon" src="image/哔哩哔哩.png" ></p>
+    <p class="url">哔哩哔哩</p>
+  </div>
+
+  <!-- AcFun -->
+  <div class="box">
+    <a href="http://www.acfun.cn/"></a>
+    <p><img class="icon" src="image/AcFun.png" ></p>
+    <p class="url">Acfun</p>
+  </div>
+
+  <!-- 爱奇艺 -->
+  <div class="box">
+    <a href="https://www.iqiyi.com/"></a>
+    <p><img class="icon" src="image/爱奇艺.png" ></p>
+    <p class="url">爱奇艺</p>
+  </div>
+
+  <!-- 腾讯视频 -->
+  <div class="box">
+    <a href="https://v.qq.com/"></a>
+    <p><img class="icon" src="image/腾讯视频.png" ></p>
+    <p class="url">腾讯视频</p>
+  </div>
+
+  <!-- 优酷 -->
+  <div class="box">
+    <a href="https://youku.com/"></a>
+    <p><img class="icon" src="image/优酷.png" ></p>
+    <p class="url">优酷</p>
+  </div>
+
+  <!-- 搜狐视频 -->
+  <div class="box">
+    <a href="https://tv.sohu.com/"></a>
+    <p><img class="icon" src="image/搜狐视频.png" ></p>
+    <p class="url">搜狐视频</p>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+function search () {
+var wd=document.getElementsByName("word")[0].value;
+var link="https://cn.bing.com/search?q="+wd;
+window.open(link); }
+</script>
+
+</body>
+</html>
