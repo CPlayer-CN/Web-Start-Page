@@ -67,8 +67,9 @@
 
 <script type="text/javascript">
 function search () {
-var word=document.getElementsByName("word")[0].value;
-window.location.href="https://cn.bing.com/search?q="+word;
+    var word=document.getElementsByName("word")[0].value;
+    var link="https://cn.bing.com/search?q="+word;
+    window.open(link); 
 }
 </script>
 
