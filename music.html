@@ -1,76 +1,100 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="zh-cmn-Hans">
 <head>
-  <meta content="en-us" http-equiv="Content-Language" />
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>首页</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>音乐 - 网页起始页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/mend.css">
+    <link rel="stylesheet" href="https://mirror-cdnjs.oss-cn-hangzhou.aliyuncs.com/mdui/0.4.2/css/mdui.min.css">
+    <!-- JS -->
+    <script src="https://mirror-cdnjs.oss-cn-hangzhou.aliyuncs.com/mdui/0.4.2/js/mdui.min.js"></script>
 </head>
-<body>
+<body class="mdui-theme-primary-indigo mdui-theme-accent-indigo">
 
 <!-- 感谢你能看到这段文字，我想说如果你想要共享这个文件请先查看 https://github.com/CPlayer-CN/Web-Start-Page#知识共享协议 -->
-<div id="content">
 
-  <div class="search_part">
-    <!-- 徽标 -->
-    <a class="logo" href="index.html">CPlayer</a>
-    <!-- 搜索 -->
-    <form onsubmit="return search()" class="search_bar">
-      <input type="submit" id="search_submit" value="搜索">
-      <span><input class="search" type="text" value="" name="word" autocomplete="off" id="search_input" ></span>
+<!-- 导航栏 -->
+<nav class="mdui-toolbar mdui-color-theme">
+    <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
+    <a href="https://github.com/CPlayer-CN/Web-Start-Page" class="discolor mdui-typo-title">CPlayer</a>
+</nav>
+
+<div class="mdui-drawer mdui-drawer-close" id="drawer">
+    <form id="search-form" action="https://cn.bing.com/search?" method="GET">
+        <div class="mdui-textfield">
+            <input name="q" type="text" class="mdui-textfield-input" placeholder="搜索">
+        </div>
     </form>
-  </div>
-
-  <!-- 网易云音乐 -->
-  <div class="box">
-    <a href="https://music.163.com/"></a>
-    <p><img class="icon" src="image/网易云音乐.png" ></p>
-    <p class="url">网易云音乐</p>
-  </div>
-
-  <!-- QQ音乐 -->
-  <div class="box">
-    <a href="https://y.qq.com/"></a>
-    <p><img class="icon" src="image/QQ音乐.png" ></p>
-    <p class="url">QQ音乐</p>
-  </div>
-
-  <!-- 酷狗音乐 -->
-  <div class="box">
-    <a href="https://www.kugou.com/"></a>
-    <p><img class="icon" src="image/酷狗音乐.png" ></p>
-    <p class="url">酷狗音乐</p>
-  </div>
-
-  <!-- 虾米音乐 -->
-  <div class="box">
-    <a href="https://www.xiami.com/"></a>
-    <p><img class="icon" src="image/虾米音乐.png" ></p>
-    <p class="url">虾米音乐</p>
-  </div>
-
- <!-- 5sing -->
-  <div class="box">
-    <a href="http://5sing.kugou.com/"></a>
-    <p><img class="icon" src="image/5sing.png" ></p>
-    <p class="url">5sing</p>
-  </div>
-
-  <!-- 喜马拉雅 -->
-  <div class="box">
-    <a href="https://ximalaya.com/"></a>
-    <p><img class="icon" src="image/喜马拉雅.png" ></p>
-    <p class="url">喜马拉雅</p>
-  </div>
+    <div class="mdui-list" mdui-collapse="{accordion: true}">
+        <div class="mdui-collapse-item">
+            <a href="index.html" class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">homes</i>
+                <div class="mdui-list-item-content">首页</div>
+            </a>
+        </div>
+        <div class="mdui-collapse-item mdui-collapse-item-open">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">widgets</i>
+                <div class="mdui-list-item-content">分类</div>
+                <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+                <a href="shop.html" class="mdui-list-item mdui-ripple">电商</a>
+                <a href="video.html" class="mdui-list-item mdui-ripple">视频</a>
+                <a href="music.html" class="mdui-list-item mdui-ripple mdui-list-item-active">音乐</a>
+            </div>
+        </div>
+    </div>
 </div>
 
-<script type="text/javascript">
-function search () {
-    var word=document.getElementsByName("word")[0].value;
-    window.open("https://cn.bing.com/search?q="+word); 
-}
-</script>
+<!-- 主体 -->
+<div id="sites" class="mdui-container">
+
+    <!-- 网易云音乐 -->
+    <div class="box mdui-col-xs-3 mdui-col-sm-2 mdui-col-md-1">
+        <a href="https://music.163.com/">
+        <p><img class="icon" src="image/网易云音乐.png" ></p>
+        <p class="url">网易云音乐</p></a>
+    </div>
+
+    <!-- QQ音乐 -->
+    <div class="box mdui-col-xs-3 mdui-col-sm-2 mdui-col-md-1">
+        <a href="https://y.qq.com/">
+        <p><img class="icon" src="image/QQ音乐.png" ></p>
+        <p class="url">QQ音乐</p></a>
+    </div>
+
+    <!-- 酷狗音乐 -->
+    <div class="box mdui-col-xs-3 mdui-col-sm-2 mdui-col-md-1">
+        <a href="https://www.kugou.com/">
+        <p><img class="icon" src="image/酷狗音乐.png" ></p>
+        <p class="url">酷狗音乐</p></a>
+    </div>
+
+    <!-- 虾米音乐 -->
+    <div class="box mdui-col-xs-3 mdui-col-sm-2 mdui-col-md-1">
+        <a href="https://www.xiami.com/">
+        <p><img class="icon" src="image/虾米音乐.png" ></p>
+        <p class="url">虾米音乐</p></a>
+    </div>
+
+    <!-- 5sing -->
+    <div class="box mdui-col-xs-3 mdui-col-sm-2 mdui-col-md-1">
+        <a href="http://5sing.kugou.com/">
+        <p><img class="icon" src="image/5sing.png" ></p>
+        <p class="url">5sing</p></a>
+    </div>
+
+    <!-- 喜马拉雅 -->
+    <div class="box mdui-col-xs-3 mdui-col-sm-2 mdui-col-md-1">
+        <a href="https://ximalaya.com/">
+        <p><img class="icon" src="image/喜马拉雅.png" ></p>
+        <p class="url">喜马拉雅</p></a>
+    </div>
+
+</div>
 
 </body>
 </html>
